@@ -91,6 +91,22 @@ return [
             'prefix_indexes' => true,
         ],
 
+        'tarantool' => [
+            'driver' => 'tarantool',
+            'host' => env('TARANTOOL_DB_HOST', '127.0.0.1'),
+            'port' => env('TARANTOOL_DB_PORT', 3301),
+            'database' => env('TARANTOOL_DB_DATABASE'),
+            'username' => env('TARANTOOL_DB_USERNAME'),
+            'password' => env('TARANTOOL_DB_PASSWORD'),
+            'driver_oprions' => [
+                'connection_type' => env('TARANTOOL_DB_CONNECTION_TYPE', 'tcp')
+            ],
+            'options' => [
+                'connect_timeout' => 5,
+                'max_retries' => 3
+            ]
+        ],
+
     ],
 
     /*
@@ -123,7 +139,7 @@ return [
 
         'options' => [
             'cluster' => env('REDIS_CLUSTER', 'redis'),
-            'prefix' => env('REDIS_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_').'_database_'),
+            'prefix' => env('REDIS_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_') . '_database_'),
         ],
 
         'default' => [
