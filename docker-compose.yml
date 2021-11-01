@@ -28,5 +28,16 @@ services:
             - ./docker/mysql/init:/docker-entrypoint-initdb.d
             - mysql:/var/lib/mysql
 
+    tarantool:
+        container_name: tarantool
+        image: tarantool/tarantool:2.8
+        command: "tarantool /opt/tarantool/init.lua"
+        ports:
+            - "3301:3301"
+        volumes:
+            - ./docker/tarantool/init.lua:/opt/tarantool/init.lua
+            - tarantool:/var/lib/tarantool
+
 volumes:
     mysql:
+    tarantool:
