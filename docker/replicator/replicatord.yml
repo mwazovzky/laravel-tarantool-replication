@@ -1,0 +1,20 @@
+mysql:
+  host: mysql
+  port: 3306
+  user: root
+  password: rootsecret
+  connect_retry: 15 # seconds
+
+tarantool:
+  host: tarantool:3301
+  binlog_pos_space: 512
+  binlog_pos_key: 0
+  connect_retry: 15
+  sync_retry: 1000
+
+mappings:
+  - database: laravel
+    table: dummies
+    columns: [id, body]
+    space: 513
+    key_fields: [0]

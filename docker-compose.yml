@@ -38,6 +38,16 @@ services:
             - ./docker/tarantool/init.lua:/opt/tarantool/init.lua
             - tarantool:/var/lib/tarantool
 
+    replicator:
+        container_name: replicator
+        build:
+            context: ./docker/replicator
+        command: "replicatord -c /replicatord.yml -l /proc/1/fd/1"
+        volumes:
+            - ./docker/replicator/replicatord.yml:/replicatord.yml
+        depends_on:
+            - mysql
+            - tarantool
 volumes:
     mysql:
     tarantool:
