@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d4842c22e789d247c4b660e69490545f",
+    "content-hash": "9660a64de09b688a420c156ecc6a93d9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -121,6 +121,72 @@
                 }
             ],
             "time": "2021-08-15T20:50:18+00:00"
+        },
+        {
+            "name": "chocofamilyme/laravel-tarantool",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/chocofamilyme/laravel-tarantool.git",
+                "reference": "599fe68820f56cc2ccab3ebaf258320e2e9bcf83"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/chocofamilyme/laravel-tarantool/zipball/599fe68820f56cc2ccab3ebaf258320e2e9bcf83",
+                "reference": "599fe68820f56cc2ccab3ebaf258320e2e9bcf83",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/container": "^8.0",
+                "illuminate/database": "^8.0",
+                "illuminate/events": "^8.0",
+                "illuminate/support": "^8.0",
+                "php": "^7.3",
+                "rybakit/msgpack": "^0.7",
+                "tarantool/client": "^0.8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.16",
+                "vimeo/psalm": "^4.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Chocofamily\\Tarantool\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Chocofamily\\Tarantool\\": "src/Tarantool/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "IT Rahmet App",
+                    "homepage": "https://rahmetapp.kz/"
+                }
+            ],
+            "description": "A Tarantool based Eloquent ORM and Query builder for Laravel",
+            "homepage": "https://github.com/chocofamilyme/laravel-tarantool",
+            "keywords": [
+                "db",
+                "eloquent",
+                "eloquent-tarantool",
+                "laravel",
+                "orm",
+                "tarantool"
+            ],
+            "support": {
+                "issues": "https://github.com/chocofamilyme/laravel-tarantool/issues",
+                "source": "https://github.com/chocofamilyme/laravel-tarantool/tree/1.0.1"
+            },
+            "time": "2020-12-02T11:51:40+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -2850,6 +2916,67 @@
             "time": "2021-09-25T23:10:38+00:00"
         },
         {
+            "name": "rybakit/msgpack",
+            "version": "v0.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rybakit/msgpack.php.git",
+                "reference": "f3ad27e3e7eba2204e022ec175a981e6ccb97548"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rybakit/msgpack.php/zipball/f3ad27e3e7eba2204e022ec175a981e6ccb97548",
+                "reference": "f3ad27e3e7eba2204e022ec175a981e6ccb97548",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.1|^8"
+            },
+            "require-dev": {
+                "ext-gmp": "*",
+                "friendsofphp/php-cs-fixer": "^2.14",
+                "phpunit/phpunit": "^7.1|^8|^9"
+            },
+            "suggest": {
+                "ext-decimal": "For converting overflowed integers to Decimal objects",
+                "ext-gmp": "For converting overflowed integers to GMP objects"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MessagePack\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eugene Leonovich",
+                    "email": "gen.work@gmail.com"
+                }
+            ],
+            "description": "A pure PHP implementation of the MessagePack serialization format.",
+            "keywords": [
+                "messagepack",
+                "msgpack",
+                "pure",
+                "streaming"
+            ],
+            "support": {
+                "issues": "https://github.com/rybakit/msgpack.php/issues",
+                "source": "https://github.com/rybakit/msgpack.php/tree/v0.7.2"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/rybakit",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-12-18T21:14:07+00:00"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "v6.3.0",
             "source": {
@@ -5178,6 +5305,83 @@
                 }
             ],
             "time": "2021-10-26T09:30:15+00:00"
+        },
+        {
+            "name": "tarantool/client",
+            "version": "v0.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tarantool-php/client.git",
+                "reference": "ee6bc94db592796123f8c2541f69594fa8453c31"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tarantool-php/client/zipball/ee6bc94db592796123f8c2541f69594fa8453c31",
+                "reference": "ee6bc94db592796123f8c2541f69594fa8453c31",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "ext-decimal": "*",
+                "ext-json": "*",
+                "ext-msgpack": "*",
+                "ext-sockets": "*",
+                "friendsofphp/php-cs-fixer": "^2.14",
+                "monolog/monolog": "^1.24|^2.0",
+                "psr/log": "^1.1",
+                "rybakit/msgpack": "^0.7",
+                "symfony/uid": "^5.1",
+                "tarantool/phpunit-extras": "^0.1.2",
+                "vimeo/psalm": "^3.9"
+            },
+            "suggest": {
+                "ext-decimal": "For using decimals with Tarantool 2.3+",
+                "ext-msgpack": "For using Pecl packer",
+                "psr/log": "For using LoggingMiddleware",
+                "rybakit/msgpack": "For using Pure packer (version 0.7 or above is required)",
+                "symfony/uid": "For using UUIDs with Tarantool 2.4+"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.8.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Tarantool\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eugene Leonovich",
+                    "email": "gen.work@gmail.com"
+                }
+            ],
+            "description": "PHP client for Tarantool.",
+            "keywords": [
+                "client",
+                "nosql",
+                "pure",
+                "tarantool"
+            ],
+            "support": {
+                "issues": "https://github.com/tarantool-php/client/issues",
+                "source": "https://github.com/tarantool-php/client/tree/v0.8.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/rybakit",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-09-10T08:58:30+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -7955,5 +8159,5 @@
         "php": "^7.3|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }
