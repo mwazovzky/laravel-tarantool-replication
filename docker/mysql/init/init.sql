@@ -1,0 +1,1 @@
+-- this script runs when container is created to seed initial data

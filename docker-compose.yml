@@ -1,0 +1,32 @@
+version: "3.3"
+
+services:
+    app:
+        container_name: app
+        build:
+            context: .
+            dockerfile: ./docker/php/Dockerfile
+            args:
+                HOST_USER: ${HOST_USER}
+                HOST_USER_ID: ${HOST_USER_ID}
+        restart: unless-stopped
+        volumes:
+            - ./:/var/www
+            - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
+
+    mysql:
+        container_name: mysql
+        image: mysql:5.7
+        ports:
+            - 3306:3306
+        environment:
+            - MYSQL_ROOT_PASSWORD=rootsecret
+            - MYSQL_ALLOW_EMPTY_PASSWORD=true
+            - MYSQL_DATABASE=laravel
+        volumes:
+            - ./docker/mysql/conf.d:/etc/mysql/conf.d
+            - ./docker/mysql/init:/docker-entrypoint-initdb.d
+            - mysql:/var/lib/mysql
+
+volumes:
+    mysql:
