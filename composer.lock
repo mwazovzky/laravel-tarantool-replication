@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9660a64de09b688a420c156ecc6a93d9",
+    "content-hash": "fdc50a231f7246dc12635aaa0d0c39f9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -124,17 +124,11 @@
         },
         {
             "name": "chocofamilyme/laravel-tarantool",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/chocofamilyme/laravel-tarantool.git",
-                "reference": "599fe68820f56cc2ccab3ebaf258320e2e9bcf83"
-            },
+            "version": "dev-main",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/chocofamilyme/laravel-tarantool/zipball/599fe68820f56cc2ccab3ebaf258320e2e9bcf83",
-                "reference": "599fe68820f56cc2ccab3ebaf258320e2e9bcf83",
-                "shasum": ""
+                "type": "path",
+                "url": "./packages/chocofamilyme/laravel-tarantool",
+                "reference": "7db3d89c93235cec29628938043b9e5aaa2433a4"
             },
             "require": {
                 "illuminate/container": "^8.0",
@@ -162,7 +156,18 @@
                     "Chocofamily\\Tarantool\\": "src/Tarantool/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "scripts": {
+                "test": [
+                    "@test:style",
+                    "@test:psalm"
+                ],
+                "test:style": [
+                    "@php vendor/bin/php-cs-fixer"
+                ],
+                "test:psalm": [
+                    "@php vendor/bin/psalm"
+                ]
+            },
             "license": [
                 "BSD-3-Clause"
             ],
@@ -182,11 +187,9 @@
                 "orm",
                 "tarantool"
             ],
-            "support": {
-                "issues": "https://github.com/chocofamilyme/laravel-tarantool/issues",
-                "source": "https://github.com/chocofamilyme/laravel-tarantool/tree/1.0.1"
-            },
-            "time": "2020-12-02T11:51:40+00:00"
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "dflydev/dot-access-data",
