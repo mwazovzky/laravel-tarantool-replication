@@ -24,6 +24,8 @@ box.cfg {
      too_long_threshold = 0.5;
  }
 
+ box.schema.user.grant('guest','read,write,execute','universe')
+
  local function bootstrap()
  
     if not box.space.mysqldaemon then
